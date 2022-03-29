@@ -19,6 +19,9 @@ export class AppComponent implements OnInit {
   data = 'hello world';
   showValue : string | number = '';
   view!: string;
+  thats:string = 'peter';
+  disable: boolean = false;
+
   constructor(private ngzone: NgZone) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {

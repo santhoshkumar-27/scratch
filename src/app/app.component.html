@@ -44,3 +44,10 @@
 
 <h2 class="heading">Style with css of </h2>
 <app-user-list></app-user-list>
+
+
+<!-- in use case of interpolation, its only works on string and numbers, it can't work on boolean values
+property values work with boolean values  -->
+<input type="text" name="value1" id="showdown" value="{{thats}}" disabled={{disable}}>
+<br><br>
+<input type="text" name="value2" id="showdown2" [value]="thats" [disabled]="disable">
