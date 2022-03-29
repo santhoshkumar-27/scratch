@@ -17,9 +17,9 @@ export class AppComponent implements OnInit {
   // }
   title = 'scratch';
   data = 'hello world';
-  showValue : string | number = '';
+  showValue: string | number = '';
   view!: string;
-  thats:string = 'peter';
+  thats: string = 'peter';
   disable: boolean = false;
 
   constructor(private ngzone: NgZone) { }
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     }, 3000)
     this.outSideData()
   }
-  getName(params : string| number) {
+  getName(params: string | number) {
     alert(`welcome ${params}`)
   }
   showData() {
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
   getValue(e: string) {
     console.warn(e)
   }
-  newValue(e : string | number) {
+  newValue(e: string | number) {
     this.showValue = e;
   }
 }
