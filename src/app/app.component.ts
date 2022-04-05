@@ -15,13 +15,38 @@ export class AppComponent implements OnInit {
   // function dont(params) {
   //   console.log('params', params);
   // }
+  color1: string = 'blue';
+  users: string[] = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqr', 'stu', 'vwx', 'z'];
+  userDetails = [
+    {
+      name: 'abc',
+      age: 23,
+      accounts: ['facebook', 'yahoo', 'twitter']
+    },
+    {
+      name: 'def',
+      age: 24,
+      accounts: ['yahoo', 'twitter', 'facebook']
+    },
+    {
+      name: 'ghi',
+      age: 25,
+      accounts: ['instagram', 'twitch', 'discord']
+    },
+    {
+      name: 'jkl',
+      age: 24,
+      accounts: ['tinder', 'finder', 'snapchat']
+    },
+  ]
   title = 'scratch';
   data = 'hello world';
   showValue: string | number = '';
   view!: string;
   thats: string = 'peter';
   disable: boolean = false;
-
+  condition: boolean = true;
+  color: string = 'blue';
   constructor(private ngzone: NgZone) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {
@@ -50,5 +75,8 @@ export class AppComponent implements OnInit {
   }
   newValue(e: string | number) {
     this.showValue = e;
+  }
+  updateColor() {
+    this.color1 = 'skyblue';
   }
 }

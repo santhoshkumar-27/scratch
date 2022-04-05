@@ -1,0 +1,22 @@
+nav {
+    background-color: black;
+}
+nav img {
+    width: 70px;
+    display: inline-block;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: aliceblue;
+}

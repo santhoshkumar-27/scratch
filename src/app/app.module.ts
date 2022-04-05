@@ -7,6 +7,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CounterComponent } from './counter/counter.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CounterComponent } from './counter/counter.component';
     UserListComponent,
     StudentListComponent,
     CountryListComponent,
-    CounterComponent
+    CounterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

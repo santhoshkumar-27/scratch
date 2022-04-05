@@ -42,12 +42,58 @@
 <p>input value {{showValue}}</p> -->
 <!-- <app-counter></app-counter> -->
 
-<h2 class="heading">Style with css of </h2>
-<app-user-list></app-user-list>
+<!-- <h2 class="heading">Style with css of </h2>
+<app-user-list></app-user-list> -->
 
 
 <!-- in use case of interpolation, its only works on string and numbers, it can't work on boolean values
 property values work with boolean values  -->
-<input type="text" name="value1" id="showdown" value="{{thats}}" disabled={{disable}}>
+<!-- <input type="text" name="value1" id="showdown" value="{{thats}}" disabled={{disable}}>
 <br><br>
-<input type="text" name="value2" id="showdown2" [value]="thats" [disabled]="disable">
+<input type="text" name="value2" id="showdown2" [value]="thats" [disabled]="disable"> -->
+
+<!-- <ng-container *ngIf="condition; then ifBlock; else elseBlock"> -->
+    <!-- <h3>if true statement</h3> -->
+<!-- </ng-container> -->
+<!-- *ngIf works only ng-container of angular derivative -->
+<!-- <h3 *ngIf="condition; else elseBlock">
+    if true block
+</h3> -->
+<!-- <h3 *ngIf="condition; then ifBlock; else elseBlock"></h3> -->
+<!-- else condition works only on ng-template -->
+<!-- <ng-template #ifBlock>
+    <h3>if condition</h3>
+</ng-template>
+<ng-template #elseBlock>
+    <h3>else block</h3>
+</ng-template>
+<ng-template [ngIf]="true">
+    <h3>hi</h3>
+</ng-template> -->
+<!-- [ngIf] -->
+<!-- multiple ng If statement -->
+<!-- <ng-template [ngIf]="color == 'red'">
+    <h3 style="color: red;">color Red</h3>
+</ng-template>
+<ng-template [ngIf]="color == 'green'">
+    <h3 style="color: green;">color green</h3>
+</ng-template>
+<ng-template [ngIf]="color == 'blue'">
+    <h3 style="color: blue;">color blue</h3>
+</ng-template> -->
+
+<!-- <h4 *ngFor="let data of users">{{data}}</h4>
+<h4 *ngFor="let data of userDetails">{{data | json}}</h4> -->
+
+<!-- <ul *ngFor="let user of userDetails">
+    <li>{{user.name}}</li>
+    <li>{{user.age}}</li>
+    <ul *ngFor="let account of user.accounts">
+        <li>{{account}}</li>
+    </ul>
+</ul> -->
+<!-- <h3 style="color: green;">Blue</h3> -->
+<!-- <h3 [style.color]="color1">style binding</h3>
+<button type="button" (click)="updateColor()">change color</button> -->
+
+<app-header></app-header>
