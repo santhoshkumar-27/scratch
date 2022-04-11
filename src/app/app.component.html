@@ -53,7 +53,7 @@ property values work with boolean values  -->
 <input type="text" name="value2" id="showdown2" [value]="thats" [disabled]="disable"> -->
 
 <!-- <ng-container *ngIf="condition; then ifBlock; else elseBlock"> -->
-    <!-- <h3>if true statement</h3> -->
+<!-- <h3>if true statement</h3> -->
 <!-- </ng-container> -->
 <!-- *ngIf works only ng-container of angular derivative -->
 <!-- <h3 *ngIf="condition; else elseBlock">
@@ -96,4 +96,33 @@ property values work with boolean values  -->
 <!-- <h3 [style.color]="color1">style binding</h3>
 <button type="button" (click)="updateColor()">change color</button> -->
 
-<app-header></app-header>
+<!-- <app-header></app-header> -->
+<form #baseForm="ngForm" (ngSubmit)="getFormValue(baseForm)">
+    <input type="text" ngModel name="email" id="email" #email placeholder="email">
+    <br><br>
+    <input type="text" ngModel name="name" id="name" placeholder="name">
+    <br><br>
+    <input type="number" ngModel name="number" id="number" placeholder="number">
+    <br><br>
+    <input type="text" ngModel name="location" id="location" placeholder="location">
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+<ul>
+    <li>
+        {{userInfo.email}}
+    </li>
+    <li>
+        {{userInfo.name}}
+    </li>
+    <li>
+        {{userInfo.number}}
+    </li>
+    <li>
+        {{userInfo.location}}
+    </li>
+</ul>
+<br>
+{{baseForm.value | json}}
+<br>
+{{email.value}}

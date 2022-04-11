@@ -1,4 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit {
   disable: boolean = false;
   condition: boolean = true;
   color: string = 'blue';
+  userInfo: any = {};
   constructor(private ngzone: NgZone) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {
@@ -78,5 +80,9 @@ export class AppComponent implements OnInit {
   }
   updateColor() {
     this.color1 = 'skyblue';
+  }
+  getFormValue(e: NgForm) {
+    console.log(e.value)
+    this.userInfo = e.value
   }
 }
