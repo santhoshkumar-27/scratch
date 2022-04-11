@@ -49,6 +49,7 @@ export class AppComponent implements OnInit {
   condition: boolean = true;
   color: string = 'blue';
   userInfo: any = {};
+  showToggle: boolean = true;
   constructor(private ngzone: NgZone) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {
@@ -84,5 +85,8 @@ export class AppComponent implements OnInit {
   getFormValue(e: NgForm) {
     console.log(e.value)
     this.userInfo = e.value
+  }
+  toggleMe() {
+    this.showToggle = !this.showToggle;
   }
 }

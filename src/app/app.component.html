@@ -97,7 +97,7 @@ property values work with boolean values  -->
 <button type="button" (click)="updateColor()">change color</button> -->
 
 <!-- <app-header></app-header> -->
-<form #baseForm="ngForm" (ngSubmit)="getFormValue(baseForm)">
+<!-- <form #baseForm="ngForm" (ngSubmit)="getFormValue(baseForm)">
     <input type="text" ngModel name="email" id="email" #email placeholder="email">
     <br><br>
     <input type="text" ngModel name="name" id="name" placeholder="name">
@@ -125,4 +125,7 @@ property values work with boolean values  -->
 <br>
 {{baseForm.value | json}}
 <br>
-{{email.value}}
+{{email.value}} -->
+
+<button (click)="toggleMe()">toggle me</button>
+<h2 *ngIf="showToggle">toggle</h2>
