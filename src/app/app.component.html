@@ -126,7 +126,19 @@ property values work with boolean values  -->
 {{baseForm.value | json}}
 <br>
 {{email.value}} -->
-
+<!-- 
 <button (click)="toggleMe()">toggle me</button>
 <h2 *ngIf="showToggle">toggle</h2>
 <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+
+
+<h3>todo list</h3>
+<input type="text" placeholder="Enter todo here" name="todo" id="todo" #todo>
+<br><br>
+<button type="button" (click)="addTodo(todo)">Add todo</button>
+<ul>
+    <li *ngFor="let todo of todoArray">{{todo.name}} <button (click)="removeTodo(todo.id)">clear</button></li>
+</ul> -->
+<h2>data passess from the parent to child</h2>
+<app-child [passingFromParent]="childData"></app-child>
+<button type="button" (click)="updateChildData()">increament</button>

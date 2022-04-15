@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   // function dont(params) {
   //   console.log('params', params);
   // }
+  childData: number = 1;
   color1: string = 'blue';
   users: string[] = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqr', 'stu', 'vwx', 'z'];
   userDetails = [
@@ -50,6 +51,7 @@ export class AppComponent implements OnInit {
   color: string = 'blue';
   userInfo: any = {};
   showToggle: boolean = true;
+  todoArray : any[] = [];
   constructor(private ngzone: NgZone) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {
@@ -88,5 +90,19 @@ export class AppComponent implements OnInit {
   }
   toggleMe() {
     this.showToggle = !this.showToggle;
+  }
+  addTodo(e:any) {
+    this.todoArray.push({id: this.todoArray.length, name: e.value})
+    e.value = '';
+  }
+  removeTodo(e : number)
+  {
+    const findindex = this.todoArray.findIndex(x => x.id == e);
+    this.todoArray.splice(findindex, 1)
+  }
+  updateChildData() {
+    // this.childData = Math.floor(Math.random()) << 3;
+    // this.childData = parseInt((Math.floor(Math.random()) << 3).toString())
+    this.childData = Math.floor(Math.random() * 10);
   }
 }

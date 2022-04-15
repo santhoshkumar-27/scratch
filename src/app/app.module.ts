@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { MatSliderModule } from '@angular/material/slider';
     StudentListComponent,
     CountryListComponent,
     CounterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
