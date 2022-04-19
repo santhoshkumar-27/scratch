@@ -1,3 +1,9 @@
-<h2 class="custom">user-list works!</h2>
+<!-- <h2 class="custom">user-list works!</h2>
 
-<p class="heading">ng g c userlist --inline-style</p>
+<p class="heading">ng g c userlist --inline-style</p> -->
+
+<li>{{items.name}}</li>
+<li>{{items.age}}</li>
+<ul *ngFor="let acc of items.accounts">
+    <li>{{acc}}</li>
+</ul>

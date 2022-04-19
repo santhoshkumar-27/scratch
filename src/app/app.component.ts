@@ -105,4 +105,7 @@ export class AppComponent implements OnInit {
     // this.childData = parseInt((Math.floor(Math.random()) << 3).toString())
     this.childData = Math.floor(Math.random() * 10);
   }
+  update(e: string) {
+      console.log('e', e);
+  }
 }

@@ -1,1 +1,6 @@
 <h1>childs work {{passingFromParent}}</h1>
+
+<input type="text" #output>
+<button type="button" (click)="updateEvent(output.value)">from child</button>
+<br>
+<br>
