@@ -147,3 +147,9 @@ property values work with boolean values  -->
         <app-user-list [items]="user"></app-user-list>
     </ul>
 </ng-container> -->
+
+<input type="text" [(ngModel)]="twoway">
+{{twoway}}
+
+<input type="text" #boxValue>
+<button type="button" (click)="clickToView(boxValue)">click to view</button>

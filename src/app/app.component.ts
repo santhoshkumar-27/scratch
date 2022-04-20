@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   // function dont(params) {
   //   console.log('params', params);
   // }
+  twoway: any;
   childData: number = 1;
   color1: string = 'blue';
   users: string[] = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqr', 'stu', 'vwx', 'z'];
@@ -107,5 +108,8 @@ export class AppComponent implements OnInit {
   }
   update(e: string) {
       console.log('e', e);
+  }
+  clickToView(e: HTMLInputElement) {
+    console.log(e.value);
   }
 }
