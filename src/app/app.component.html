@@ -139,17 +139,25 @@ property values work with boolean values  -->
 <ul>
     <li *ngFor="let todo of todoArray">{{todo.name}} <button (click)="removeTodo(todo.id)">clear</button></li>
 </ul> -->
-<h2>data passess from the parent to child</h2>
+<!-- <h2>data passess from the parent to child</h2>
 <app-child [passingFromParent]="childData"  (updateEven)="update($event)"></app-child>
-<button type="button" (click)="updateChildData()">increament</button>
+<button type="button" (click)="updateChildData()">increament</button> -->
 <!-- <ng-container *ngFor="let user of userDetails">
     <ul>
         <app-user-list [items]="user"></app-user-list>
     </ul>
 </ng-container> -->
 
-<input type="text" [(ngModel)]="twoway">
+<!-- <input type="text" [(ngModel)]="twoway">
 {{twoway}}
 
 <input type="text" #boxValue>
-<button type="button" (click)="clickToView(boxValue)">click to view</button>
+<button type="button" (click)="clickToView(boxValue)">click to view</button> -->
+<!-- <h2>{{title | uppercase}}</h2> -->
+<!-- <h2>{{title | lowercase}}</h2> -->
+<!-- <h2>{{date | date}}</h2> -->
+<!-- <h2>{{date | date:"fullDate"}}</h2> -->
+<!-- <h2>{{title | slice: 3:6}}</h2> -->
+<!-- <h2>{{userDetails |json | uppercase}}</h2> -->
+<!-- <h2>{{546464651234.2311110| number:'1.2-3'}}</h2>   before dot mininum number is one, after a dot 2-3 is minimun is two and 3 is maximum -->
+<h2>{{100| currency: 'INR'}}</h2>

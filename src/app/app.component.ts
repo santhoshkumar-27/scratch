@@ -42,7 +42,8 @@ export class AppComponent implements OnInit {
       accounts: ['tinder', 'finder', 'snapchat']
     },
   ]
-  title = 'scratch';
+  title = 'Scratch Wratch About of Anthing';
+  date = Date();
   data = 'hello world';
   showValue: string | number = '';
   view!: string;
