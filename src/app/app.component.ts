@@ -113,4 +113,9 @@ export class AppComponent implements OnInit {
   clickToView(e: HTMLInputElement) {
     console.log(e.value);
   }
+  loginFormSubmit(e: any) 
+  {
+    console.warn('eee', e);
+    
+  }
 }

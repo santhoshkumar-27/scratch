@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
+import { UseinrPipe } from './shared/pipes/useinr.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ChildComponent } from './child/child.component';
     CountryListComponent,
     CounterComponent,
     HeaderComponent,
-    ChildComponent
+    ChildComponent,
+    UseinrPipe
   ],
   imports: [
     BrowserModule,

@@ -160,4 +160,21 @@ property values work with boolean values  -->
 <!-- <h2>{{title | slice: 3:6}}</h2> -->
 <!-- <h2>{{userDetails |json | uppercase}}</h2> -->
 <!-- <h2>{{546464651234.2311110| number:'1.2-3'}}</h2>   before dot mininum number is one, after a dot 2-3 is minimun is two and 3 is maximum -->
-<h2>{{100| currency: 'INR'}}</h2>
+<!-- <h2>{{100| currency: 'INR'}}</h2> -->
+
+<!-- <h2>{{60 | useinr: 76:12}}</h2> -->
+
+<h6> template validation</h6>
+<form #loginForm="ngForm" (ngSubmit)="loginFormSubmit(loginForm.value)">
+    <label for="email">Email</label>
+    <br><br>
+    <input type="text" required name="email" pattern="[a-zA-Z]+$" #email="ngModel" ngModel>
+    <div *ngIf="email.invalid && email.touched">enter valid email</div>
+    <br><br>
+    <label for="password">password</label>
+    <br><br>
+    <input type="password" required name="password" minlength="2" maxlength="10" #password="ngModel" placeholder="enter your password" ngModel>
+    <div *ngIf="password.invalid && password.touched">enter valid password</div>
+    <br><br>
+    <button type="submit" [disabled]="loginForm.invalid">log-in</button>
+</form>
