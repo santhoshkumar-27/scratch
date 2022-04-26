@@ -1,6 +1,17 @@
-<h1>childs work {{passingFromParent}}</h1>
+<!-- <h1>childs work {{passingFromParent}}</h1>
 
 <input type="text" #output>
 <button type="button" (click)="updateEvent(output.value)">from child</button>
 <br>
-<br>
+<br> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+    <input type="text" name="name" formControlName="name" placeholder="enter your name">
+    <span *ngIf="name && name.invalid && name.touched" style="color: red;">name is required</span>
+    <br><br>
+    <input type="password" name="password" formControlName="password" placeholder="enter your password">
+    <span *ngIf="password && password.invalid && password.touched" style="color: red;">password in required</span>
+    <br><br>
+    <button type="submit" [disabled]="loginForm.invalid">submit</button>
+</form>
+<button (click)="patchValue()">patch value</button>
