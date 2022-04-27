@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ChildComponent } from './child/child.component';
 import { UseinrPipe } from './shared/pipes/useinr.pipe';
+import { RedDirective } from './shared/directive/red.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { UseinrPipe } from './shared/pipes/useinr.pipe';
     CounterComponent,
     HeaderComponent,
     ChildComponent,
-    UseinrPipe
+    UseinrPipe,
+    RedDirective,
   ],
   imports: [
     BrowserModule,
