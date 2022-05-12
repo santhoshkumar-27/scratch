@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
@@ -54,7 +54,8 @@ export class AppComponent implements OnInit {
   userInfo: any = {};
   showToggle: boolean = true;
   todoArray : any[] = [];
-  constructor(private ngzone: NgZone) { }
+  constructor(private ngzone: NgZone,
+   private vcR: ViewContainerRef, private cf: ComponentFactoryResolver) { }
   // if we want a dynamic data in template we use property and methods to show data in template
   ngOnInit() {
     console.log('this is 1st', this.view)
@@ -117,5 +118,19 @@ export class AppComponent implements OnInit {
   {
     console.warn('eee', e);
     
+  }
+  async loaduser() {
+    this.vcR.clear();
+    const {HeaderComponent} = await import('./header/header.component')
+    this.vcR.createComponent(
+      this.cf.resolveComponentFactory(HeaderComponent)
+    );
+  }
+  async loadAdmin() {
+    this.vcR.clear();
+    const {ChildComponent} = await import('./child/child.component');
+    this.vcR.createComponent(
+      this.cf.resolveComponentFactory(ChildComponent)
+    );
   }
 }

@@ -12,7 +12,9 @@ export class ChildComponent implements OnInit {
     name: new FormControl('', [Validators.required, Validators.maxLength(5)]),
     password: new FormControl('', [Validators.required])
   })
-  constructor() { }
+  constructor() { 
+    console.log('childer component')
+  }
 
   ngOnInit(): void {
   }
